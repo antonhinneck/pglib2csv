@@ -35,7 +35,7 @@ m_files = listDotMFiles( dir );
 
 for i = 1:length(m_files)
 
-  #case2csv(stripDotM(m_files{i,1}), csv_dir)
+  case2csv(stripDotM(m_files{i,1}), csv_dir)
   
 end
 
