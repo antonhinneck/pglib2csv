@@ -13,6 +13,6 @@ As of right now, it is fully compatible with the csv files created by this scrip
 
 ## Upcoming
 
-Configuration with PowerGrids.jl requires manual setup. Running *./pglib* will contain the option to set a system path variable for seemless integration in the future.
+Configuration with PowerGrids.jl requires a manual setup process. Running *./pglib* will contain the option to set a system path variable for seemless integration in the future.
 
 A python interface is going to be written next.
