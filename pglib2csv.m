@@ -45,7 +45,7 @@ cd( unpacked_dir );
 #----------
 
 unpacked_dir_sad = addToPath( unpacked_dir, "sad" );
-csv_dir_sad = addToPath(  csv_dir, "sad" );
+csv_dir_sad = addToPath( csv_dir, "sad" );
 mkdir( csv_dir_sad );
 
 cd( unpacked_dir_sad );

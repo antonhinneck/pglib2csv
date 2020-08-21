@@ -16,7 +16,7 @@ function case2csv( func_name, csv_dir )
                           "Vmax";	
                           "Vmin"])';
                              
-  bus_body = num2cell(str2func(func_name)().branch);
+  bus_body = num2cell(str2func(func_name)().bus);
   bus = [bus_headings; bus_body];
   
   # gen
@@ -93,9 +93,18 @@ function case2csv( func_name, csv_dir )
   branch_body = num2cell(str2func(func_name)().branch);
   branch = [branch_headings; branch_body];
   
+  # params
+  #-------
+  params_headings = cellstr(["version";	
+                             "baseMVA"])';
+                             
+  params_body = [num2cell(str2func(func_name)().version), num2cell(str2func(func_name)().baseMVA)];
+  params = [params_headings; params_body];
+  
   data_dir = addToPath(csv_dir, func_name);
   mkdir( data_dir );
   
+  cell2csv( addToPath( data_dir, "params.csv"), params )
   cell2csv( addToPath( data_dir, "bus.csv"), bus )
   cell2csv( addToPath( data_dir, "gen.csv"), gen)
   cell2csv( addToPath( data_dir, "gencost.csv"), gencost)
